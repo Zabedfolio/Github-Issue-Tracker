@@ -1,6 +1,6 @@
 // console.log("Hello! This is home page")
 let activeTab = "all"
-let issueData = [];
+let issuesData = [];
 
 
 // spinner
@@ -168,6 +168,22 @@ tabButtons.forEach(btn => {
         manageSpinner(false);
     })
 })
+
+document.getElementById("btn-search").addEventListener("click", async () => {
+    const input = document.getElementById("input-search");
+    const searchValue = input.value.trim().toLowerCase();
+
+    const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues");
+    const data = await res.json();
+
+    const allIssues = data.data;
+    const filtered = allIssues.filter(issue =>
+        issue.title.toLowerCase().includes(searchValue) ||
+        issue.description.toLowerCase().includes(searchValue)
+    );
+
+    showIssues(filtered);
+});
 
 
 
