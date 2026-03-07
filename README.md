@@ -9,9 +9,7 @@ const → block scoped, declare করার পরে value change করা �
 
 ### What is the spread operator (...)?
 
-Ans: ... use হয় array বা object এর elements spread / copy করার জন্য।
-const arr1 = [1,2];
-const arr2 = [...arr1,3,4];
+Ans: ... use হয় array বা object এর elements spread / copy করার জন্য
 
 
 ### What is the difference between map(), filter(), and forEach()?
@@ -22,4 +20,11 @@ filter() → condition অনুযায়ী selected elements দিয়ে new 
 
 forEach() → শুধু loop করে, কিছু return করে না।
 
+### What is an arrow function?
 
+Ans: ES6 এ আসা shorter function syntax।
+
+
+### What are template literals?
+
+Ans: Backtick ` ` ব্যবহার করে string লিখা হয় এবং ${} দিয়ে variable use করা যায়।
