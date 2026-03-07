@@ -6,11 +6,13 @@ let → block scoped, value change করা যায় কিন্তু same s
 
 const → block scoped, declare করার পরে value change করা যায় না।
 
+<hr>
 
 ### What is the spread operator (...)?
 
 Ans: ... use হয় array বা object এর elements spread / copy করার জন্য
 
+<hr>
 
 ### What is the difference between map(), filter(), and forEach()?
 
@@ -20,9 +22,13 @@ filter() → condition অনুযায়ী selected elements দিয়ে new 
 
 forEach() → শুধু loop করে, কিছু return করে না।
 
+<hr>
+
 ### What is an arrow function?
 
 Ans: ES6 এ আসা shorter function syntax।
+
+<hr>
 
 
 ### What are template literals?
