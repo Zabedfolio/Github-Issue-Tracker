@@ -1,5 +1,6 @@
 // console.log("Hello! This is home page")
 let activeTab= "all"
+let issueData = [];
 
 const api = "https://phi-lab-server.vercel.app/api/v1/lab/issues";
 
@@ -88,11 +89,29 @@ function showIssues(issues) {
 }
 
 // tab-buttons
-document.querySelectorAll(".issue-tab-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-        console.log("btn")
+const tabButtons = document.querySelectorAll(".issue-tab-btn");
+tabButtons.forEach(btn =>{
+    btn.addEventListener("click", ()=>{
+        activeTab = btn.dataset.tab;
+
+        tabButtons.forEach(b =>{
+            b.classList.remove("btn-primary");
+            b.classList.add("btn-outline");
+        });
+
+        btn.classList.remove("btn-outline");
+        btn.classList.add("btn-primary");
+
+        if(activeTab === "all"){
+            showIssues(issuesData);
+        }else{
+            const filtered = issuesData.filter(issue => issue.status === activeTab);
+            showIssues(filtered);
+        }
     })
 })
+
+
 
 
 
